@@ -6,7 +6,7 @@ exports.create = async (req, res) => {
     res.status(200).json(newOrder);
   } catch (e) {
     console.log(e);
-    res.sttaus(400).json(e);
+    res.status(400).json(e);
   }
 };
 

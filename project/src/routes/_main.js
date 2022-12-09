@@ -2,5 +2,6 @@ module.exports = [
     require('./userR'),
     require('./productR'),
     require('./orderR'),
-    require('./cartR')
+    require('./cartR'),
+    require('./stripeR')
 ]

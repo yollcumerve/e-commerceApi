@@ -1,28 +1,5 @@
 const jwt = require('jsonwebtoken')
 
-// const authToken = (req,res,next) => {
-//     const token = req.headers["authorization"].split(" ")[1]
-
-//     if(token){
-//         jwt.verify(token, `${process.env.JWT_SECRET_KEY}`, (err, decodedToken) => {
-//             if(err){
-//                 console.log(err.message)
-//                 res.status(400).json(err)
-//             }else{
-//                 if(decodedToken.isAdmin){
-//                     next()
-//                 }else{
-//                     res.json({succeeded: false, error: 'You are not an admin'})
-//                 }
-//             }
-//         })
-//     }else{
-//         res.json({succeeded: false, error: 'No token'})
-//     }
-// }
-
-//module.exports = { authToken}
-
 const verifyToken = (req,res,next) => {
     const authHeader = req.headers.token
     if(authHeader){
